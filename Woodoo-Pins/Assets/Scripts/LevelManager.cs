@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour
     Rotator rotator;
     Spawner spawner;
     Animator animator;
+    AudioManager audioManager;
 
     [SerializeField] float restartWait = 2f;
 
@@ -18,6 +19,7 @@ public class LevelManager : MonoBehaviour
         rotator = FindObjectOfType<Rotator>().GetComponent<Rotator>();
         spawner = FindObjectOfType<Spawner>().GetComponent<Spawner>();
         animator = GetComponent<Animator>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
 
@@ -43,26 +45,6 @@ public class LevelManager : MonoBehaviour
     private void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
-    public void BackToMainMenu()
-    {
-        SceneManager.LoadScene(KeyWords.startscreen);
-    }
-
-    public void GotoInstructionMenu()
-    {
-        SceneManager.LoadScene(KeyWords.instructionscreen);
-    }
-
-    public void GotoGamesScreen()
-    {
-        SceneManager.LoadScene(KeyWords.gamescreen);
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
     }
 
 }

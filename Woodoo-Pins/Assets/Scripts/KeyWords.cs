@@ -12,5 +12,9 @@ public class KeyWords
     public const string gamescreen = "Level";
     public const string startscreen = "StartScreen";
 
+    public const string clicksound = "Click";
+    public const string pinerror = "Fail";
+    public const string pinsuccessful = "Success";
+
 
 }
